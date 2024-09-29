@@ -4,9 +4,9 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const app = express();
 require("dotenv").config({ path: "backend/config/.env" });
-app.use(express.json());
-app.use(express.urlencoded({ extended:true}));
-app.use(cookieParser());
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
+app.use(cookieParser());  
 const post = require("./Routes/PostRoute");
 const user = require("./Routes/userRoute");
 

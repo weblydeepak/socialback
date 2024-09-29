@@ -1,4 +1,3 @@
-
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
@@ -11,7 +10,7 @@ const postSchema = new mongoose.Schema({
 
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
+    ref: "User",
   },
 
   createdAt: {
